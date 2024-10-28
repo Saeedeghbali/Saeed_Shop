@@ -28,14 +28,17 @@
   <ItemGroup>
     <Compile Include="app.py" />
     <Compile Include="blueprints\admin.py" />
+    <Compile Include="config.py" />
     <Compile Include="blueprints\general.py" />
     <Compile Include="blueprints\user.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="blueprints\" />
+    <Folder Include="models\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 

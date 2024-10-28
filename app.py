@@ -16,6 +16,7 @@ wsgi_app = app.wsgi_app
 app.register_blueprint(general)
 app.register_blueprint(user)
 app.register_blueprint(admin)
+
 @app.route('/')
 def hello():
     """Renders a sample page."""
