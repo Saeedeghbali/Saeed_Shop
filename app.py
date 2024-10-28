@@ -1,26 +1,24 @@
-"""
-This script runs the application using a development server.
-It contains the definition of routes and views for the application.
-"""
-
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 from blueprints.general import app as general
 from blueprints.user import app as user
 from blueprints.admin import app as admin
 
 app = Flask(__name__)
-
-# Make the WSGI interface available at the top level so wfastcgi can get it.
 wsgi_app = app.wsgi_app
 
 app.register_blueprint(general)
 app.register_blueprint(user)
 app.register_blueprint(admin)
 
-@app.route('/')
-def hello():
-    """Renders a sample page."""
-    return "Hello World!"
+db=SQLAlchemy()
+
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
+
+db.init_app(app)
+
+with app.app_context():
+    db.create_all()
 
 if __name__ == '__main__':
     import os
