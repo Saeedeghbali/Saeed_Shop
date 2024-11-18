@@ -1,3 +1,4 @@
+from tkinter import ON
 from flask import Flask
 from blueprints.general import app as general
 from blueprints.user import app as user
@@ -13,9 +14,8 @@ app.register_blueprint(admin)
 
 
 
-
 app.config["SQLALCHEMY_DATABASE_URI"] = config.SQLALCHEMY_DATABASE_URI
-
+app.config["SECRET_KEY"]= config.SECRET_KEY
 extentions.db.init_app(app)
 
 with app.app_context():
@@ -28,4 +28,4 @@ if __name__ == '__main__':
         PORT = int(os.environ.get('SERVER_PORT', '5555'))
     except ValueError:
         PORT = 5555
-    app.run(HOST, PORT)
+    app.run(HOST, PORT,debug=ON)

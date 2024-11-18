@@ -7,4 +7,4 @@ class Product(db.Model):
     name = Column(String,nullable=False,index=True)
     discriptin = Column(String,nullable=False,index=True)
     price = Column(Integer,nullable=False,index=True)
-    
+    active = Column(INTEGER,nullable=False,index=True)
