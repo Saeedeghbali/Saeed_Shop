@@ -44,6 +44,9 @@
     <Content Include="templates\admin\products.html" />
     <Content Include="templates\admin\login.html" />
     <Content Include="templates\base.html" />
+    <Content Include="templates\about.html" />
+    <Content Include="templates\product.html" />
+    <Content Include="templates\main.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="blueprints\" />
