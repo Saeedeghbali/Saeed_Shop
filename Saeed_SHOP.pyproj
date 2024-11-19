@@ -16,6 +16,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>Saeed_SHOP</Name>
     <RootNamespace>Saeed_SHOP</RootNamespace>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,6 +40,7 @@
     <Content Include=".gitignore" />
     <Content Include="requirements.txt" />
     <Content Include="templates\admin\dashboard.html" />
+    <Content Include="templates\admin\edit-product.html" />
     <Content Include="templates\admin\products.html" />
     <Content Include="templates\admin\login.html" />
     <Content Include="templates\base.html" />

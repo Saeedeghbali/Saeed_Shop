@@ -23,6 +23,7 @@
     </table>
     
 <form action="#" method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     <input type="text" name="name" placeholder="نام محصول" /><br>
     <input type="number" name="price" placeholder="قیمت محصول" /><br>
     <textarea name="discriptin" placeholder="توضیحات"></textarea><br>

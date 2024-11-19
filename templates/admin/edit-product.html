@@ -4,8 +4,9 @@
 {% endblock %}
 {% block body%}
 
-    
+    <a href="/admin/dashboard/products">صفحه محصولات</a>
     <form action="#" method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
         <input type="text" name="name" value={{ product.name }} placeholder="نام محصول" /><br>
         <input type="number" name="price" value={{ product.price }} placeholder="قیمت محصول" /><br>
         <textarea name="discriptin" placeholder ="توضیحات">{{ product.discriptin }}</textarea><br>

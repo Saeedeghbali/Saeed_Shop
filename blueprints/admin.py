@@ -11,7 +11,6 @@ app=Blueprint("admin",__name__)
 
 @app.before_request
 def before_request():
-    print(request.endpoint)
     if session.get('admin_login', None) == None and request.endpoint != 'admin.login':
         abort(403)
 
